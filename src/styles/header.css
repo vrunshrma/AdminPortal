@@ -1,0 +1,240 @@
+.header {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 70px; /* Consistent height */
+  background-color: #333;
+  color: white;
+  z-index: 1000;
+  padding: 0 15px; /* Add slight padding */
+}
+
+/* Existing styles... */
+
+/* .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} */
+
+.navbar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 30% !important;
+  height: 60px !important;
+  padding: 0 5px !important;
+  background-color: #333;
+}
+
+/* Ensure Navbar Brand stays centered */
+.navbar-brand {
+  font-size: 1.2rem !important;
+  font-weight: bold;
+  color: #fff !important;
+  text-decoration: none;
+  cursor: pointer !important;
+  flex-grow: 1;
+  text-align: center;
+  padding: 17px 0px !important;
+  width: 10%;
+}
+
+.navbar-brand:hover,
+.navbar-brand:focus {
+  color: #ff3300; /* Change color on hover/focus */
+}
+
+/* Align items to the right */
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack items vertically */
+    height: auto; /* Adjust height */
+    padding: 0px !important;
+  }
+
+  .navbar-brand {
+    
+    text-align: center;
+    width: 80%;
+    padding-bottom: 10px;
+  }
+
+  .navbar-nav {
+    width: 100%;
+    justify-content: center; /* Center the Logout button */
+  }
+
+  .nav-item
+  {
+    margin: 10px 0; /* Add spacing between items */
+    height: 5% !important;
+    font-weight: bold !important;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .header {
+    padding: 15px; /* Reduce padding */
+    height: auto;
+  }
+
+  .navbar {
+    padding: 5px; /* Reduce padding */
+  }
+
+  .navbar-brand {
+    font-size: 1.1rem !important;
+    
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    text-align: center;
+    width: 100% !important;
+  }
+
+  .nav-item {
+    margin: 20px 0; /* Add spacing between items */
+    height: 5% !important;
+    padding: 10px 0 !important;
+    font: 1.1rem !important;
+  }
+
+  .nav-link {
+    padding: 10px 0 !important;
+    font:bold !important;
+  }
+}
+
+
+.navbar-collapse {
+  display: flex !important;
+  justify-content: flex-end;
+  align-items: center;
+  flex-grow: 1;
+  font: 100% !important;
+  font: bold !important;
+}
+
+.navbar-nav {
+  display: flex !important;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.nav-item {
+  margin-left: 10px !important;
+  display: flex;
+  padding: 20px;
+  font-weight: bold !important;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font: bold !important;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* @media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.2rem; 
+    padding: 10px 0px; 
+  }
+}
+
+
+@media (max-width: 480px) {
+  .navbar-brand {
+    font-size: 1rem !important; 
+    padding: 0px 40px !important; 
+    text-align: left !important; 
+    display: flex; 
+  }
+} */
+
+.hamburger-button {
+  font-size: 25px !important;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: white;
+  padding: 10px 5px !important;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+/* for logout button */
+.navbar-nav {
+  display: flex !important;
+  align-items: flex-end;
+  justify-content: flex-end; /* Moves content to the right */
+  height: 80px !important;
+  width: 0%; 
+}
+
+
+
+.collapse {
+  display: flex;
+  align-items: center;
+}
+
+/* move the private component below from the header */
+.container {
+  padding-top: 10px;
+  /* Adjust this value based on the header height */
+}
+
+/* for moving the calendar below from the header component */
+ .cal_container {
+  padding-top: 30px;
+  
+} 
+
+
+/* Existing styles remain unchanged... */
+
+/* .nav-link {
+  color: white;
+  
+  cursor: pointer;
+  text-decoration: none;
+  
+  padding: 10px 15px;
+  
+  transition: background-color 0.3s ease;
+  
+} */
+
+/* .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  
+  border-radius: 4px;
+} */
+
+/* Remove any default browser styling that might cause the box appearance */
+/* .nav-link {
+  background: none;
+  border: none;
+  box-shadow: none;
+} */
+
+/* Ensure it aligns well with the header and other elements */
+/* .nav-item {
+  display: flex;
+  align-items: center;
+} */

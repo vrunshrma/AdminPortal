@@ -1,0 +1,22 @@
+const LogoutComponent = () => {
+
+
+    const handleLogout = () => {
+        localStorage.removeItem("token");
+        localStorage.removeItem("role");
+        setIsLoggedIn(false);
+
+        window.dispatchEvent(new Event("authChange"));
+        window.dispatchEvent(new Event("storage"));
+        navigate("/login");
+    };
+
+    return (
+        <div>
+            <h1>You are logged out</h1>
+            <div className="container">Thank you for using our application.</div>
+        </div>
+    );
+};
+
+export default LogoutComponent;
