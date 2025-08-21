@@ -4,14 +4,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10 20px; 
+    padding: 10px 20px; 
 }
 
 .material-symbols-outlined {
   font-variation-settings:
     'SIZE' 32,
   'FILL' 80,
-  'wght' 10000,
+  'wght' 400,
   'GRAD' 50,
   'opsz' 246
 }
@@ -23,7 +23,7 @@
 }
 
 .left-links a, .right-links a {
-    margin: 0 10px; 
+    margin: 0px 10px; 
     padding-right: 20px;
 }
 

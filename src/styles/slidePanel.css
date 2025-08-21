@@ -9,9 +9,6 @@
 	transition: transform 0.5s;
 	will-change: transform;
 	opacity: 1 !important;
-	/* Full opacity */
-
-	opacity: 1 !important;
 	z-index: 10000 !important;
 }
 
@@ -25,6 +22,20 @@
 /* Style the title */
 .sliding-pane__title {
 	color: white !important;
+}
+
+.slide-pane .slide-pane__title {
+	font-size: 18px;
+	font-weight: bold;
+	max-width: 80%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin: 0;
+	padding: 0;
+	color: white !important;
+	margin-left: 10px;
+	margin-top: 50px;
 }
 
 /* Customize the close button */
@@ -84,19 +95,7 @@
 	
 }
 
-.slide-pane .slide-pane__title {
-	font-size: 18px;
-	font-weight: bold;
-	max-width: 80%;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	margin: 0;
-	padding: 0;
-	color: white !important;
-	margin-left: 10px;
-	margin-top: 50px;
-}
+
 
 .slide-pane__close {
 	margin-left: 24px;

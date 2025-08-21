@@ -6,12 +6,16 @@ src/EmployeeDashboard.css
 
 .main-content {
     position: relative;
-    left: 90px;
-    transition: 1s;
-    margin-left: 0;
+    margin-left: 250px; /* default sidebar width */
+    transition: margin-left 0.5s;
     padding: 20px;
     padding-top: 90px;
-    width: calc(100% - 270px);
+    width: calc(100% - 250px);
+}
+
+.sidebar:hover ~ .main-content {
+    margin-left: 280px; /* expanded sidebar width */
+    width: calc(100% - 280px);
 }
 
 .section {
