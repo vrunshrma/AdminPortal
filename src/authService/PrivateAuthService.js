@@ -1,7 +1,11 @@
 import axios from "axios";
 
-const AUTH_REST_API_BASE_URL = "http://192.168.1.12:9090/api/v1/user"
-const Attendance_REST_API_BASE_URL = "http://192.168.1.12:9090/attendancedetail"
+const AUTH_REST_API_BASE_URL = "https://attendancebackend-production-6068.up.railway.app/api/v1/user"
+// "http://192.168.1.12:9090/api/v1/user"
+const Attendance_REST_API_BASE_URL = "https://attendancebackend-production-6068.up.railway.app/attendancedetail"
+// "http://192.168.1.12:9090/attendancedetail"
+
+
 
 export const registerAPICall = (registerData) => {
   const token = localStorage.getItem('token');

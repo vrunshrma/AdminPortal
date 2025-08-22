@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const AUTH_REST_API_BASE_URL = "http://192.168.1.12:9090/api/v1/auth";
+const AUTH_REST_API_BASE_URL = "https://attendancebackend-production-6068.up.railway.app/api/v1/auth"
+// "http://192.168.1.12:9090/api/v1/auth";
 
 export const loginAPICall = (login) => axios.post(`${AUTH_REST_API_BASE_URL}/login`, login);
 
