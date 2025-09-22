@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { getAllEmployee } from '../authService/PrivateAuthService';
 import '../styles/userlist.css'
+import '../styles/loadingSpinner.css';
+import LoadingSpinner from './LoadingSpinner';
 
 const DashboardComponent = () => {
   const [userDetails, setUserDetails] = useState([]);
@@ -31,7 +33,7 @@ const DashboardComponent = () => {
   };
 
   if (isLoading) {
-    return <p>Loading user details...</p>; // Show loading state
+    return <LoadingSpinner />; // Show spinner when loading
   }
 
   const indexOfLastUser = currentPage * usersPerPage;

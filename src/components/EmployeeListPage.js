@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { getAllEmployee } from '../authService/PrivateAuthService';
 import { useNavigate } from 'react-router-dom';
 import '../styles/userlist.css'
+import LoadingSpinner from './LoadingSpinner';
 
 const EmployeeListPage = () => {
   const [userDetails, setUserDetails] = useState([]);
@@ -49,8 +50,8 @@ const EmployeeListPage = () => {
     return isActive ? "Active" : "Inactive";
   };
 
-  if (isLoading) {
-    return <p>Loading user details...</p>; // Show loading state
+    if (isLoading) {
+    return <LoadingSpinner />; // Show spinner when loading
   }
 
   const indexOfLastUser = currentPage * usersPerPage;

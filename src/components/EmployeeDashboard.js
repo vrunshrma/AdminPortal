@@ -6,6 +6,7 @@ import '../styles/employeeDashboard.css';
 const EmployeeDashboard = () => {
     const { user } = useAuth();  // Get user details from AuthContext
     const navigate = useNavigate();
+    
 
     const [dateTime, setDateTime] = useState(new Date().toLocaleString());
     const [attendance, setAttendance] = useState({

@@ -6,12 +6,11 @@ import FooterComponent from './components/FooterComponent';
 import PrivateRoutes from './routesComponent/PrivateRoutes';
 import { AuthProvider, useAuth } from './authService/AuthContext';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import SlidePanelComponent from './routesComponent/SlidePanelComponent';
+// import SlidePanelComponent from './routesComponent/SlidePanelComponent';
 import { useState } from 'react';
 import { history } from './components/NavigationService';
 
 function App() {
-
   const [isPanelOpen, setIsPanelOpen] = useState(false);
 
   const togglePanel = () => {
@@ -22,8 +21,8 @@ function App() {
     <Router>
       <AuthProvider>
         {/* Global Slide Panel (Rendered outside HeaderComponent) */}
-        <SlidePanelComponent isOpen={isPanelOpen} togglePanel={togglePanel} />
-        <HeaderComponent togglePanel={togglePanel} />
+        {/* <SlidePanelComponent isOpen={isPanelOpen} togglePanel={togglePanel} /> */}
+        {/* <HeaderComponent togglePanel={togglePanel} /> */}
         <RoutesHandler />
         <FooterComponent />
       </AuthProvider>
@@ -41,16 +40,11 @@ const RoutesHandler = () => {
 
   if (isAuthenticated) {
     // Retrieve role from localStorage
-    const userRole = localStorage.getItem("role"); // Default role if not found
+    const userRole = localStorage.getItem('role'); // Default role if not found
     return <PrivateRoutes userRole={userRole} />;
   }
 
   return <PublicRoutes />;
 };
 
-
-
-
 export default App;
-
-

@@ -23,13 +23,16 @@ const TokenVerificationComponent = () => {
           navigate('/emailSubmit');
         }
         console.log('Token validation successful:', response.data);
-        console.log('Token validation successful user email :', response.data.authenticateUser.email);
+        console.log(
+          'Token validation successful user email :',
+          response.data.authenticateUser.email
+        );
         localStorage.setItem('token', response.data.accessToken);
         localStorage.setItem('role', response.data.authenticateUser.role);
-        localStorage.setItem('resetPasswordEmail',response.data.authenticateUser.email);
+        localStorage.setItem('resetPasswordEmail', response.data.authenticateUser.email);
 
-        window.dispatchEvent(new Event("authChange"));
-        navigate('/resetPassword');
+        window.dispatchEvent(new Event('authChange'));
+        navigate('/resetPassword', { state: { username: response.data.authenticateUser.email } });
       })
       .catch((error) => {
         console.error('Token validation failed:', error);
