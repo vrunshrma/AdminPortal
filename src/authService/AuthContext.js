@@ -2,6 +2,7 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 import { jwtDecode } from 'jwt-decode';
 import { fetchUserDetails } from './PrivateAuthService';
 import { useNavigate } from 'react-router-dom';
+import useWindowWidth from '../hooks/useWindowWidth';
 
 const AuthContext = createContext();
 
@@ -9,12 +10,19 @@ export const AuthProvider = ({ children }) => {
   const navigate = useNavigate();
   const [user, setUser] = useState(null);
   const [isAuthenticated, setIsAuthenticated] = useState(null); // null to handle loading state
+  const width = useWindowWidth();
+  const isMobile = width < 768;
 
   const checkAuth = async () => {
     console.log('Checking authentication status');
     const token = localStorage.getItem('token');
 
-    if (!token) {
+    if (!token && isMobile) {
+      setIsAuthenticated(false);
+      setUser(null);
+      navigate('/mobileLogin');
+      return;
+    } else if (!token) {
       setIsAuthenticated(false);
       setUser(null);
       navigate('/loginPage');

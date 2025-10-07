@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from './AuthContext';
 import { jwtDecode } from 'jwt-decode';
+import useWindowWidth from '../hooks/useWindowWidth';
 
 const withAuth = (WrappedComponent) => {
   return (props) => {
@@ -10,8 +11,13 @@ const withAuth = (WrappedComponent) => {
     const { user, isAuthenticated } = useAuth();
     const role = localStorage.getItem('role');
     const token = localStorage.getItem('token');
+    const width = useWindowWidth();
+    const isMobile = width < 768;
     useEffect(() => {
-      if (isAuthenticated === false) {
+      if (!token && isMobile) {
+        navigate('/mobileLogin');
+        return;
+      } else if (!token) {
         navigate('/loginPage');
         return;
       }

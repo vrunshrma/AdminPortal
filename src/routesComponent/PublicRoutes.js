@@ -1,12 +1,13 @@
 // routes.js
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import LoginComponent from '../components/LoginComponent';
-import EmailSubmitComponent from '../components/EmailSubmitComponent';
+import LoginComponent from '../DesktopComponents/LoginComponent';
+import EmailSubmitComponent from '../DesktopComponents/EmailSubmitComponent';
 import TokenVerificationComponent from '../authService/TokenVerification';
-import LoginPage from '../components/NewLoginPage';
-import AdminUserManagement from '../components/AdminUserManagement';
-import ResetPasswordPage from '../components/NewResetPasswordComponent';
+import LoginPage from '../DesktopComponents/NewLoginPage';
+import AdminUserManagement from '../DesktopComponents/AdminUserManagement';
+import ResetPasswordPage from '../DesktopComponents/NewResetPasswordComponent';
+import MobileLogin from '../MobileComponents/MobileLogin';
 
 const routes = [
   { path: '/', element: <LoginPage /> },
@@ -14,6 +15,7 @@ const routes = [
   { path: '/login', element: <LoginComponent /> },
   { path: '/createPassword', element: <TokenVerificationComponent /> },
   { path: '/loginPage', element: <LoginPage /> },
+  { path: '/mobileLogin', element: <MobileLogin /> },
 ];
 
 const PublicRoutes = () => (

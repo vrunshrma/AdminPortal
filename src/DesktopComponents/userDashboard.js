@@ -89,8 +89,10 @@ const UserDashboard = () => {
     });
 
   const handleCheckIn = async () => {
+    console.log('inside handleCheckIn Function');
     navigator.geolocation.getCurrentPosition(
       (position) => {
+        console.log('User position : ', position);
         const attendanceData = {
           employeeId: user?.id,
           attendanceStatus: 'Present',
@@ -101,7 +103,7 @@ const UserDashboard = () => {
           latitude: position.coords.latitude,
           longitude: position.coords.longitude,
         };
-
+        console.log('attendance data : ', attendanceData);
         addAttendance(attendanceData)
           .then((addResponse) => {
             if (addResponse.data.status === 'FAILED') {

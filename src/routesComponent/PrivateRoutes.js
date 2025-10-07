@@ -1,29 +1,31 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import EmployeeListPage from '../components/EmployeeListPage';
-import DashboardComponent from '../components/DashboardComponent';
-import RegisterComponent from '../components/RegisterComponent';
-import ResetPasswordComponent from '../components/ResetPasswordComponent';
-import CalendarComponent from '../components/CalendarComponent';
-import SlidePanel from '../components/SlidePanelComponent';
-import EmployeeRegisterComponent from '../components/EmployeeRegisterComponent';
-import EmployeeDashboard from '../components/EmployeeDashboard';
-import AbsenceRequest from '../components/AbsenceRequest';
+import EmployeeListPage from '../DesktopComponents/EmployeeListPage';
+import DashboardComponent from '../DesktopComponents/DashboardComponent';
+import RegisterComponent from '../DesktopComponents/RegisterComponent';
+import ResetPasswordComponent from '../DesktopComponents/ResetPasswordComponent';
+import CalendarComponent from '../DesktopComponents/CalendarComponent';
+import SlidePanel from '../DesktopComponents/SlidePanelComponent';
+import EmployeeRegisterComponent from '../DesktopComponents/EmployeeRegisterComponent';
+import EmployeeDashboard from '../DesktopComponents/EmployeeDashboard';
+import AbsenceRequest from '../DesktopComponents/AbsenceRequest';
 import withAuth from '../authService/WithAuth';
-import LogoutComponent from '../components/LogoutComponent';
-import UserDashboard from '../components/userDashboard';
-import DesiredDashboard from '../components/DesiredDash';
-import AdminUserManagement from '../components/AdminUserManagement';
-import AdminDashboard from '../components/AdminDashboard';
+import LogoutComponent from '../DesktopComponents/LogoutComponent';
+import UserDashboard from '../DesktopComponents/userDashboard';
+import DesiredDashboard from '../DesktopComponents/DesiredDash';
+import AdminUserManagement from '../DesktopComponents/AdminUserManagement';
+import AdminDashboard from '../DesktopComponents/AdminDashboard';
 import Layout from './Layout';
-import ReportsAnalytics from '../components/ReportsAnalytics';
-import ProfileComponent from '../components/ProfileComponent';
-import ResetPasswordPage from '../components/NewResetPasswordComponent';
-import LeaveManagement from '../components/LeaveManagement';
-import AttendanceSettingsMenu from '../components/AttendanceSettingsMenu';
-import BranchList from '../components/BranchList';
-import UpdatedAdminDashboard from '../components/UpdatedDashboard';
-import LeavePolicy from '../components/LeavePolicy';
+import ReportsAnalytics from '../DesktopComponents/ReportsAnalytics';
+import ProfileComponent from '../DesktopComponents/ProfileComponent';
+import ResetPasswordPage from '../DesktopComponents/NewResetPasswordComponent';
+import LeaveManagement from '../DesktopComponents/LeaveManagement';
+import AttendanceSettingsMenu from '../DesktopComponents/AttendanceSettingsMenu';
+import BranchList from '../DesktopComponents/BranchList';
+import UpdatedAdminDashboard from '../DesktopComponents/UpdatedDashboard';
+import LeavePolicy from '../DesktopComponents/LeavePolicy';
+import MobileAdminDashboard from '../MobileComponents/MobileAdminDashboard';
+import MobileLogin from '../MobileComponents/MobileLogin';
 
 const routes = [
   { path: '/employeeList', element: <EmployeeListPage />, roles: ['ADMIN'] },
@@ -48,6 +50,8 @@ const routes = [
   { path: '/branchList', element: <BranchList />, roles: ['ADMIN'] },
   { path: '/admin', element: <UpdatedAdminDashboard />, roles: ['ADMIN'] },
   { path: '/leavePolicy', element: <LeavePolicy />, roles: ['ADMIN'] },
+  { path: '/mobAdminDashboard', element: <MobileAdminDashboard />, roles: ['ADMIN'] },
+  //{ path: '/mobileLogin', element: <MobileLogin /> },
   // { path: '/userSettings', element: <UserSettings />, roles: ['EMPLOYEE'] },
 ];
 

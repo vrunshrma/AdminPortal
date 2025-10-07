@@ -1,13 +1,31 @@
 import axios from 'axios';
 
-const AUTH_REST_API_BASE_URL = 'http://localhost:9090/api/v1/user';
+//const AUTH_REST_API_BASE_URL = 'http://localhost:9090/api/v1/user';
+const AUTH_REST_API_BASE_URL = window._env_.AUTH_REST_API_BASE_URL;
+//const AUTH_REST_API_BASE_URL = 'http://192.168.1.12:9090/api/v1/user';
 // "https://attendancebackend-production-6068.up.railway.app/api/v1/user"
-//
-const Attendance_REST_API_BASE_URL = 'http://localhost:9090/attendancedetail';
-//
+
+//const AUTH_REST_API_BASE_URL = 'http://172.20.10.2:9090/api/v1/user';
+
+//const AUTH_REST_API_BASE_URL = 'http://192.168.1.14:9090/api/v1/user';
+
+const Attendance_REST_API_BASE_URL = window._env_.ATTENDANCE_REST_API_BASE_URL;
+//const Attendance_REST_API_BASE_URL = 'http://localhost:9090/attendancedetail';
+//const Attendance_REST_API_BASE_URL = 'http://172.20.10.2:9090/attendancedetail';
+
+//const Attendance_REST_API_BASE_URL = 'http://192.168.1.14:9090/attendancedetail';
+//const Attendance_REST_API_BASE_URL = 'http://192.168.1.12:9090/attendancedetail';
+
 // "https://attendancebackend-production-6068.up.railway.app/attendancedetail"
 
-const LEAVE_REST_API_BASE_URL = 'http://localhost:9090/leavedetail';
+//const LEAVE_REST_API_BASE_URL = 'http://localhost:9090/leavedetail';
+
+//const LEAVE_REST_API_BASE_URL = 'http://172.20.10.2:9090/leavedetail';
+
+//const LEAVE_REST_API_BASE_URL = 'http://192.168.1.14:9090/leavedetail';
+//const LEAVE_REST_API_BASE_URL = 'http://192.168.1.12:9090/leavedetail';
+
+const LEAVE_REST_API_BASE_URL = window._env_.LEAVE_REST_API_BASE_URL;
 
 export const registerAPICall = (registerData) => {
   const token = localStorage.getItem('token');

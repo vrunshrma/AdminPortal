@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import HeaderComponent from '../components/HeaderComponent';
-import SlidePanelComponent from '../components/SlidePanelComponent';
+import HeaderComponent from '../DesktopComponents/HeaderComponent';
+import SlidePanelComponent from '../DesktopComponents/SlidePanelComponent';
 import { Outlet, useLocation } from 'react-router-dom';
 import { useAuth } from '../authService/AuthContext';
-import UserSlidePanelComponent from '../components/UserSlidePanelComponent';
+import UserSlidePanelComponent from '../DesktopComponents/UserSlidePanelComponent';
 
 const Layout = () => {
   // For sidebar tab state
